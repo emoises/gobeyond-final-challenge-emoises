@@ -1,0 +1,79 @@
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    padding: 0 4rem 2rem 4rem ;
+    background-color: lightcoral;
+}
+.aside{
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-right: 8rem;
+    background-color: lightslategray;
+}
+.aside h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    height: 280px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-weight: 100;
+    margin: 1.3em 0 .5em;
+    padding: 5px 0 0;
+    line-height: 1.1;
+    font-size: 3.5em;
+}
+.aside a {
+    background-color: #fff;
+    color: #000;
+    max-width: 195px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25PX;
+    margin: 0 20px 8px 0;
+}
+.aside a span {
+    padding-right: 8px;
+
+}
+.aside a div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+}
+.thumbnails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 11px;
+}
+.thumbs{
+    
+    width: 60px;
+    height: 36px;
+}
+.thumbsChecked{
+    width: 60px;
+    height: 36px;
+    border: 2px solid #fff;
+}
+.imageContainer{
+    width: 65%;
+    background-color: #777;
+}
+.imageContainer img{
+    width: 100%;
+    border-radius: 10px;
+}
