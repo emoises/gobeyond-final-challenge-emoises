@@ -13,8 +13,8 @@ const Slider: React.FC<SliderProps> = ({photos}) => {
                     <>
                     
                         <div className={styles.aside}>
-                            <h2>{photos[index]?.title}</h2>
-                            <a href={photos[index]?.url} > <span>veja mais</span> <div>{">"}</div></a>
+                            <h2>{photos[index].title}</h2>
+                            <a href={photos[index].url} > <span>veja mais</span> <div>{">"}</div></a>
                             <div className={styles.thumbnails}>
                                 {
                                     photos ? (
@@ -22,7 +22,7 @@ const Slider: React.FC<SliderProps> = ({photos}) => {
                                             return (
                                                 <img
                                                 key={idx} 
-                                                src={photo?.thumbnailUrl} 
+                                                src={photo.thumbnailUrl} 
                                                 className={index === idx ? styles.thumbsChecked : styles.thumbs}
                                                 onClick={() => setIndex(idx)}
                                                 alt="Images"
@@ -40,7 +40,7 @@ const Slider: React.FC<SliderProps> = ({photos}) => {
                         <div className={styles.imageContainer}>
                             {
                                 photos ? (
-                                    <img src={photos[index]?.url} alt={photos[index]?.title}  />
+                                    <img src={photos[index].url} alt={photos[index].title}  />
                                 ): (
                                     <span>Loading...</span>
                                 )
