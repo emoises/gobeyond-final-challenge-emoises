@@ -9,9 +9,9 @@ const Slider: React.FC<SliderProps> = ({photos}) => {
   return (
         <div className={styles.container}>
             {
-                photos ? (
+                photos ? 
+                (
                     <>
-                    
                         <div className={styles.aside}>
                             <h2>{photos[index].title}</h2>
                             <a href={photos[index].url} > <span>veja mais</span> <div>{">"}</div></a>

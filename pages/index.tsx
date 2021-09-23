@@ -1,13 +1,14 @@
-import axios from 'axios'
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import axios from 'axios';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
-import styles from '../styles/home.module.css'
-import Contacts from './components/Contacts/Contacts'
-import Header from './components/Header'
-import Locations from './components/Locations/Locations'
-import Slider from './components/Slider/Slider'
+import styles from '../styles/home.module.css';
+
+import Contacts from './components/Contacts/Contacts';
+import Header from './components/Header';
+import Locations from './components/Locations/Locations';
+import Slider from './components/Slider/Slider';
 
 const Home: NextPage = () => {
   const [photos, setPhotos] = useState<PhotoProps[]>([{
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
     title: '',
     url: '',
     thumbnailUrl: ''
-  }])
+  }]);
   const fetchData = async () => {
     const response = await axios.get('api/photos?ratio=1130x670');
     const data: DataPhotoProps = response.data;
