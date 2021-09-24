@@ -1,0 +1,99 @@
+.menuBtn{
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    color: #fff;
+    margin-left: 50%;
+    z-index: 50;
+}
+.menuBtn__burguer{
+    width: 40px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .15s ease-in-out;
+}
+.menuBtn__burguer::before,
+.menuBtn__burguer::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .15s ease-in-out;
+}
+.menuBtn__burguer::before{
+    transform: translateY(-16px);
+}
+.menuBtn__burguer::after{
+    transform: translateY(16px);
+}
+.menuBtn__burguerOpen{
+    width: 40px;
+    height: 6px;
+    /* background-color: #fff; */
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .15s ease-in-out; 
+}
+.menuBtn__burguerOpen::before,
+.menuBtn__burguerOpen::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .15s ease-in-out;
+}
+.menuBtn__burguerOpen::before{
+    transform: rotate(45deg)
+}
+.menuBtn__burguerOpen::after{
+    transform: rotate(-45deg)
+}
+.listContainer{
+    position: fixed;
+    right: -1px;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    width: 200px;
+    height: 300px;
+    z-index: -1;
+}
+.listContainer{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    padding: 0;
+    width: auto;
+    transition: .15s ease-in-out;
+}
+.listContainer a {
+    min-width: 120px;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #fff;
+    padding: 0;
+    padding-bottom: 1px;
+    display: flex;
+    align-items: center ;
+}
+@media (max-width: 640px) {
+    .menuBtn{
+        display: flex;
+    }
+}

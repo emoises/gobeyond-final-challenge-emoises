@@ -1,9 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
+import {menu, corebiz} from '../../helpers';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
 
-    const {ratio} = req.query;
     const response = await axios.get('https://jsonplaceholder.typicode.com/photos',{
         params:{
             _start: 350,
@@ -11,15 +12,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
     });
 
-    const dataResponse: PhotoProps[] = await response.data;
+    const dataResponse: ApiImageProps[] = await response.data;
 
-    const photos = dataResponse.map( photo => {
+    const photos = dataResponse?.map( (photo, idx) => {
         const part1 = photo.url.substring(0,28)
         const part2 = photo.url.substring(31)
-        const newUrl = `${part1}${ratio}${part2}`
+        const newUrl = `${part1}1130x670${part2}`
         return {
             ...photo,
-            url: newUrl
+            url: newUrl,
+            link : menu[idx].link,
+            title: corebiz[idx],
+            // thumbnailUrl: thumbnailUrl[idx],
+            label: menu[idx].title
         }
     });
 

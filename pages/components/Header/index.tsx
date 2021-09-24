@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {  
+  useState 
+} from 'react';
+
 import styles from '../../../styles/header.module.css';
-import { menu } from '../../../helpers/menu';
-const Header: React.FC = ({children}) => {
+import Hamburguer from '../hamburguer';
+import Menu from '../Menu';
+
+const Header: React.FC<DataPhotoProps> = ({photos}) => {
+  const [open, setOpen] = useState(false);
+  
   return (
     <div className={styles.container}>
      
@@ -16,24 +23,11 @@ const Header: React.FC = ({children}) => {
       <path id="Path_5" d="M869.613,533.147A5.366,5.366,0,0,1,868,529.209a5.433,5.433,0,0,1,1.616-3.967,5.239,5.239,0,0,1,3.936-1.647,5.617,5.617,0,0,1,5.611,5.611,5.236,5.236,0,0,1-1.646,3.938,5.48,5.48,0,0,1-3.966,1.616A5.366,5.366,0,0,1,869.613,533.147Z" transform="translate(-663.035 -486.261)" fill="silver"/>
     </svg>
 
-      <div className={styles.menu}>
-        <ul className={styles.ul}>
-          {
-            menu.map( (items, idx ) => {
-              return (
-                <li className={styles.li} key={idx}>
-                  <a 
-                  className={styles.link} 
-                  href={items.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >{items.title}</a>
-                </li>
-              )
-            })
-          }
-        </ul>
-      </div>
+      
+      <Hamburguer open={open} getState={setOpen} photos={photos}>
+        
+      </Hamburguer>   
+        <Menu photos={photos} name="desktop" isVertical={true} />
     </div>
     );
 }

@@ -1,0 +1,72 @@
+.desktop{
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.mobile{
+    display: none;
+}
+.ul{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0;
+}
+.li {
+    list-style: none;
+}
+.li a{
+    
+    font-size: 1.4em;
+    padding-bottom: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 2px solid #000;
+    transition: .15s ease-in;
+}
+.li a:hover{
+    
+  
+    color: #555;
+    border-bottom: 2px solid #fff;
+}
+
+@media (max-width: 640px) {
+ 
+    .ul{
+        display: flex;
+        position: fixed;
+        z-index: 60;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        top: 0;
+        width: 180px;
+        height: 18rem;
+        padding-top: 8rem;
+        padding-right: 1rem;
+        display: flex;
+        background-color: rgba(0,0,0,.8);
+    }
+    .menu ul {
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+    .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid #fff ;
+
+    }
+    #logo-corebiz-global{
+        width: 100px;
+    }
+}
