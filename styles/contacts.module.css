@@ -23,7 +23,7 @@
     padding-left: 1rem;
 }
 .social .top .imageContainer p {
-    font-size: .75rem;
+    font-size: .5rem;
     font-weight: 500;
 }
 .linksContainer{
@@ -46,7 +46,7 @@
 .links{
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
+    font-size: .75rem;
     justify-content: left;
     align-items: baseline;
     

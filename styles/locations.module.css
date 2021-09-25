@@ -7,14 +7,14 @@
     background-color: #f4f4f4;
 }
 .adressContainer{
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 .adressContainer h2 {
     font-size: 1rem;
     font-weight: 600;
 }
 .adressContainer p{
-    font-size: 0.68rem;
+    font-size: 0.5rem;
     font-weight: 500;
     margin-block-start: 1em;
     margin-block-end: 1em;

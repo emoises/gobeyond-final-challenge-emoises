@@ -1,14 +1,16 @@
 .container {
   width: 100%;
+  height: 125vh;
   display: grid;
   grid-template-columns: 35% 65%;
-  grid-template-rows: 120px 540px 220px;
+  grid-template-rows: 10% 70% 20%;
   grid-template-areas: "T T"
                        "M M"
                        "BL BR"
   ;
 }
 .header{
+  height: 100%;
   grid-area: T;
   background-color: #000;
 }
@@ -19,14 +21,31 @@
 .contacts{
   grid-area: BL;
   background-color: #fff;
+  height: 100%;
 }
 .locations{
+  height: 100%;
   grid-area: BR;
   background-color: #f4f4f4;
 }
-@media (max-width: 640px) {
+@media (max-width: 1025) and (orientation: landscape){
+  .container{
+   height: 140vh;
+  }
+}
+@media (max-width: 880px) {
   .container{
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 880px) and (orientation: landscape) {
+  .container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  .header{
+    height: 10%;
   }
 }
