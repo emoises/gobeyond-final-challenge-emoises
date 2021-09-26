@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
-
+// import axios from 'axios';
+// import {imagesUrl, corebiz} from '../../helpers'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
 

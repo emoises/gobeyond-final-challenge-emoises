@@ -7,7 +7,6 @@ interface SliderProps {
 }
 const Slider: React.FC<SliderProps> = ({ photos }) => {
   const [index, setIndex] = useState(0);
-
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -36,6 +35,8 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
                 src={photo.thumbnailUrl}
                 className={index === idx ? styles.thumbsChecked : styles.thumbs}
                 onClick={() => setIndex(idx)}
+                width="auto"
+                height="auto"
                 alt="Images"
               />
             );

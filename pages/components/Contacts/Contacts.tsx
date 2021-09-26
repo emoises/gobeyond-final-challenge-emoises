@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGithub, faInstagram, faLinkedinIn}from '@fortawesome/free-brands-svg-icons'
 import styles from '../../../styles/contacts.module.css'
 const Contacts: React.FC<DataPhotoProps> = ({photos}) => {
+  const [width, setWidth] =useState(0)
+
   return (
         <div className={styles.container}>
           <div className={styles.social}>
@@ -38,6 +40,7 @@ const Contacts: React.FC<DataPhotoProps> = ({photos}) => {
                 <li>
                   <a href="https://www.linkedin.com/in/eduardomoises/" title="linkedin" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedinIn} size='4x' /> 
+                    {}
                   </a>
                 </li>
               </ul>

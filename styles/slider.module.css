@@ -6,7 +6,6 @@
     grid-template-rows: 18rem 6rem 18rem 5rem;
     grid-template-areas: "title" "button" "image" "thumbnail";
     padding: 0 4rem 2rem 4rem;
-    /* background-color: royalblue; */
 }
 .title{
     color: #fff;
@@ -16,14 +15,6 @@
     font-weight: bold;
     text-overflow: inherit;
     text-size-adjust: inherit;
-
-    /* display: -webkit-box;
-    height: 100%;
-    margin: 1rem 4rem 3rem 0;
-    min-height: 200px;
-    padding-left: 1rem;
-    padding-right: 3rem;
-    */
 }
 .title h2 {
     margin: 0;
@@ -72,7 +63,6 @@
 }
 .thumbnails{
     width: 100%;
-    /* position: absolute; */
     bottom: 0;
     grid-area: thumbnail;
     display: flex;
@@ -84,7 +74,6 @@
     width: 100%;
     image-resolution: initial;
     max-height: 100%;
-    /* contain: paint; */
     max-width: 100%;
     grid-area: image;
 }
@@ -94,7 +83,6 @@
 .thumbs{
     width: 60px;
     height: 36px;
-    /* margin-right: .75rem; */
 }
 .thumbsChecked{
     width: 60px;
@@ -123,12 +111,9 @@
         padding: 0;
         margin: 0;
     }
-
 }
-
 @media (min-width: 760px) and (orientation: portrait) {
     .container{
-        /* background-color: red; */
         grid-template-columns: 35% 65%;
         grid-template-areas: "title image" "button thumbnail";
         grid-template-rows: 24rem 6rem;
@@ -182,22 +167,15 @@
     }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
-    /* .container{
-        background-color: green;
-    } */
+
     .title{
         font-size: 2.65rem;
     }
 }
 
 @media (min-width: 1800px) and (orientation: landscape) {
-    .title{
-        /* width: 90%; */
-    }
     .container{
         grid-template-rows: 53vh 6rem 5rem;
         grid-template-columns: 30% 70%;
-        /* grid-template-areas: "title" "button" "image" "thumbnail"; */
-
     }
 }

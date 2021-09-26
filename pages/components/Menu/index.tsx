@@ -23,13 +23,13 @@ const Menu: React.FC<DataPhotoProps> = ({photos, isVertical,name}) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {items.label}
+                    {items.label} 
                   </a>
                 </li>
               )
             })
           ):(
-            <p>Carregando...</p>
+            <p> </p>
           )
         }
       </ul>
