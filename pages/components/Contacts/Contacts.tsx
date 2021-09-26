@@ -26,18 +26,18 @@ const Contacts: React.FC<DataPhotoProps> = ({photos}) => {
             <div className={styles.icons}>
               <ul>
                 <li>
-                  <a href="https://github.com/emoises" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faGithub} color="#000" size='4x' />
+                  <a href="https://github.com/emoises" title="github" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faGithub} color="#000" size='4x' /> 
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/automattizze/" target="_blank" rel="noopener noreferrer" >
-                    <FontAwesomeIcon icon={faInstagram} size='4x' />
+                  <a href="https://www.instagram.com/automattizze/" title="instagram" target="_blank" rel="noopener noreferrer" >
+                    <FontAwesomeIcon icon={faInstagram} size='4x' /> 
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/eduardomoises/" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedinIn} size='4x' />
+                  <a href="https://www.linkedin.com/in/eduardomoises/" title="linkedin" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faLinkedinIn} size='4x' /> 
                   </a>
                 </li>
               </ul>
