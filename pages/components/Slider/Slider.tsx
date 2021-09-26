@@ -22,7 +22,7 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
         >
           <p>veja mais</p>
           <div>
-            <FontAwesomeIcon icon={faChevronRight} size="2x" />
+            <FontAwesomeIcon icon={faChevronRight} size="1x" />
           </div>
         </a>
       </div>

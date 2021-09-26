@@ -29,6 +29,13 @@ a {
     font-size: 1.6rem;
   }
 }
+@media (min-height: 800px) and (min-width: 700px) and (orientation: portrait) {
+  html,
+  body {
+    font-size: 1.0rem;
+  }
+
+}
 @media (min-width: 1920px) and (orientation: landscape) {
   html,
   body {
