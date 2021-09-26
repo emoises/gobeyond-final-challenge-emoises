@@ -78,10 +78,10 @@
         align-items: center;
     }
   }
-  @media (min-height: 800px) and (min-width: 700px) and (orientation: portrait) {
-      .container{
+  /* @media (min-height: 800px) and (min-width: 700px) and (max-width: 1000px) and (orientation: portrait) {
+    .container{
           background-color: coral;
       }
       
-  }
+  } */
   

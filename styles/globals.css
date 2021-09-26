@@ -29,18 +29,25 @@ a {
     font-size: 1.6rem;
   }
 }
-@media (min-height: 800px) and (min-width: 700px) and (orientation: portrait) {
+@media (min-width: 1920px) and (orientation: landscape) {
   html,
   body {
     font-size: 1.0rem;
   }
-
+  
 }
-@media (min-width: 1920px) and (orientation: landscape) {
+@media (min-height: 800px) and (min-width: 700px) and (max-width: 1000px) and (orientation: portrait) {
   html,
   body {
-    font-size: 1.6rem;
-    background-color: cadetblue;
+    font-size: 1.0rem;
+  }
+  
+}
+
+@media (min-height: 1300px) and (min-width: 1000px) and (max-width: 1200px) and (orientation: portrait) {
+  html,
+  body {
+    font-size: 1.0rem;
   }
 
 }

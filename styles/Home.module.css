@@ -62,15 +62,9 @@
   }
 
 }
-@media (min-width: 1024px) and (orientation: landscape) {
-  .container{
-    background-color: darkgreen;
-  }
 
-}
 @media (min-width: 880px) and (orientation: landscape) {
   .container{
-    background-color: darkmagenta;
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-rows: 100px 60rem 20rem;
@@ -80,12 +74,17 @@
   ;
   }
 }
-@media (min-width: 1800px) and (orientation: landscape) {
-  .container{
-    background-color: gold;
+@media (min-width: 1920px) and (orientation: landscape) {
+    .container{
     display: grid;
     min-height: 100vh;
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 100px 75rem 23rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100px 50rem 25rem;
+  }
+}
+
+@media (min-height: 800px) and (min-width: 700px) and (max-width: 1000px) and (orientation: portrait) {
+  .container{
+    grid-template-rows: 100px 55rem 20rem 20rem;
   }
 }
