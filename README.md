@@ -1,8 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio final Go beyond. Particinado por [Corebiz](https://www.corebiz.ag/pt/)
 
-## Getting Started
+## Introdução
+Neste desafio foi proposto a execução de um site responsivo com direcionamento para 4 links e exibição de quatro imagens ( cada imagem leva a um dos links fornecidos). 
+No footer há informações para contato e endereços da Corebiz pelo mundo. (Meu preferido é Buenos Aires! rs)
+Faz parte do desafio também o consumo de uma API para utilização de imagens.
 
-First, run the development server:
+## Iniciando o Projeto
+
+Primeiro, Rode:
 
 ```bash
 npm run dev
@@ -10,25 +16,59 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) em seu browser para ver o resultado.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## API Next
+### ./pages/api
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Veja a [API](https://gobeyond-desafio-final-emoises-emoises.vercel.app/api/photos).
+Ela fornece um arquivo JSON com uma Array com objetos com este formato: 
+```JSON
+{
+    "albumId": 0,
+    "id": 0,
+    "title": "conheça um pouco de nossa história, nosso crescimento e nossa cultura.",
+    "url": "https://...",
+    "thumbnailUrl": "https://...",
+    "link": "https://www.corebiz...",
+    "label": "a corebiz"
+  },
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Para consumir essa API e cumprir um dos parâmetros do desafio utilizei a biblioteza [axios](https://www.npmjs.com/package/axios). 
 
-## Learn More
+Com estes objetos renderizos meus componentes de forma dinâmica.
 
-To learn more about Next.js, take a look at the following resources:
+## ./styles - Css
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A maior dificuldade do desafio foi fazer uma aplicação responsiva para diversos dispositivos.
+Na pasta ./Styles estão todos os arquivos, separados por componente, que modelam o site.
+Priorizei executar o site com display grid para ter mais flexibilidade na responsividade.
+Dica [Responsividade na prática](https://www.youtube.com/watch?v=H91DhKPjhPk&t=2011s)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## ./pages
 
-## Deploy on Vercel
+O arquivo index.tsx é responsável por renderizar a única página deste desafio. Porém as lógicas foi separadas em componentes buscando boas práticas na execução do código.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ./page/components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Desenvolvi 6 componentes. 
+#### Contacts
+#### Hamburguer
+#### Header
+#### Locations
+#### Menu
+#### Slider
+
+
+### Sitemap
+
+Buscando ir além procurei desenvolver o sitemap. Mas dada a simplicidade da página ainda observei grandes mudanças. Siga este link [sitemap](https://www.youtube.com/watch?v=rIh-VelVzgc).
+
+## Conclusão
+
+Cumpri os parâmetros do desafio. E posso afirmar que o grande desafio foi desenvolver o CSS de forma limpa e objetiva alcançando a responvidade para o site.
+
+Grato!
+
+#gobeyond #neverstoplearning #corebiz
