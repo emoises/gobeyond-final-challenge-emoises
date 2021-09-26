@@ -1,56 +1,63 @@
 import axios from 'axios';
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import { useCallback, useEffect, useState } from 'react';
 
 import styles from '../styles/home.module.css';
 
-import {menu, corebiz} from '../helpers';
+// import {menu, corebiz} from '../helpers';
 
 import Contacts from './components/Contacts/Contacts';
 import Header from './components/Header';
 import Locations from './components/Locations/Locations';
 import Slider from './components/Slider/Slider';
 
+const standardPhotos = [{
+  albumId:0,
+  id: 0,
+  title: '',
+  url: '',
+  thumbnailUrl: '',
+  link: '',
+  label: ''
+}]
 const Home: NextPage = () => {
-  const [photos, setPhotos] = useState<PhotoProps[]>([{
-    albumId:0,
-    id: 0,
-    title: '',
-    url: '',
-    thumbnailUrl: '',
-    link: '',
-    label: ''
-  }]);
+  const [photos, setPhotos] = useState<PhotoProps[]>(standardPhotos);
+  const [teste, setTeste] = useState()
   const getPhotos =  useCallback( async () => {
-    const response: ApiProps = await axios.get('https://jsonplaceholder.typicode.com/photos',{
-        params:{
-            _start: 350,
-            _limit:4
-        }
-    });
-    const myPhotos = response.data.map((photo, idx)=> {
-      const part1 = photo.url.substring(0,28);
-      const part2 = photo.url.substring(31);
-      const thumb1 = photo.thumbnailUrl.substring(0,28);
-      const thumb2 = photo.thumbnailUrl.substring(31);
-      const newUrl = `${part1}1130x670${part2}`;
-      const newThumb = `${thumb1}150x89${thumb2}`
-      return {
-              ...photo,
-              url: newUrl,
-              link : menu[idx].link,
-              title: corebiz[idx],
-              thumbnailUrl: newUrl,
-              label: menu[idx].title
-            }
-    })
+    // const response: ApiProps = await axios.get('https://jsonplaceholder.typicode.com/photos',{
+    //     params:{
+    //         _start: 350,
+    //         _limit:4
+    //     }
+    // });
+    // const myPhotos = response.data.map((photo, idx)=> {
+    //   const part1 = photo.url.substring(0,28);
+    //   const part2 = photo.url.substring(31);
+    //   const thumb1 = photo.thumbnailUrl.substring(0,28);
+    //   const thumb2 = photo.thumbnailUrl.substring(31);
+    //   const newUrl = `${part1}1130x670${part2}`;
+    //   const newThumb = `${thumb1}150x89${thumb2}`
+    //   return {
+    //           ...photo,
+    //           url: newUrl,
+    //           link : menu[idx].link,
+    //           title: corebiz[idx],
+    //           thumbnailUrl: newUrl,
+    //           label: menu[idx].title
+    //         }
+    // })
+    const response: ApiProps = await axios.get('api/photos')
+
+    const myPhotos = response.data
+    console.log(myPhotos)
     setPhotos(myPhotos)
   },[])
 
   useEffect( () => {
     getPhotos()
-  }, [getPhotos])
+    console.log(teste)
+  }, [getPhotos, teste])
 
   return(
     <div className={styles.container}>

@@ -28,5 +28,5 @@ interface ApiImageProps {
     thumbnailUrl: string;
 }
 interface ApiProps {
-    data: ApiImageProps[];
+    data: PhotoProps[];
 }

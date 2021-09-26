@@ -15,7 +15,6 @@ const Hamburguer: React.FC<HamburguerProps> = ({open, getState,photos}) => {
     padding: "6rem 4rem 0 4rem"
 
   }
-    // const [open, setOpen] = useState(false);
   return (
       <div className={styles.menuBtn} onClick={ () => getState(!open)}>
           <div className={open ? styles.menuBtn__burguerOpen :styles.menuBtn__burguer}>

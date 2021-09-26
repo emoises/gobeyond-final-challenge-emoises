@@ -48,7 +48,7 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
       <div className={styles.imageContainer}>
             {
                 photos ?
-                <img src={photos[index].url} alt={photos[index].title}/> :
+                <img src={photos[index].url} alt={photos[index].title} width="auto" height="auto" /> :
                 ""
             }
       </div>
