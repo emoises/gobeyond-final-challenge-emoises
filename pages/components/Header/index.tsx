@@ -8,11 +8,11 @@ import Menu from '../Menu';
 
 const Header: React.FC<DataPhotoProps> = ({photos}) => {
   const [open, setOpen] = useState(false);
-  
+
   return (
     <div className={styles.container}>
      
-     <svg id="logo-corebiz-global" xmlns="http://www.w3.org/2000/svg" width="170" height="38.25" viewBox="0 0 216.126 48.66">
+     <svg id="logo-corebiz-global-header" xmlns="http://www.w3.org/2000/svg" width="170" height="38.25" viewBox="0 0 216.126 48.66">
       <path id="Path_3" d="M722.379,480.413H714.8V446.6h7.579Z" transform="translate(-554.844 -431.883)" fill="#fff"/>
       <path id="Path_6" d="M186.749,453.328A8.394,8.394,0,0,0,180.491,456a10.059,10.059,0,0,0-2.557,7.285,10.168,10.168,0,0,0,2.585,7.373,8.5,8.5,0,0,0,6.346,2.7,7.787,7.787,0,0,0,5.377-1.822,8.961,8.961,0,0,0,2.676-4.117l6.7,2.439a15.205,15.205,0,0,1-5.111,7.373,14.75,14.75,0,0,1-9.635,3.087,15.8,15.8,0,0,1-11.809-4.876,18,18,0,0,1-.06-24.324,15.71,15.71,0,0,1,11.692-4.819,15,15,0,0,1,9.784,3.088,14.094,14.094,0,0,1,4.905,7.433l-6.844,2.5a8.59,8.59,0,0,0-2.526-4.23,7.489,7.489,0,0,0-5.263-1.766Z" transform="translate(-170.302 -431.678)" fill="#fff"/>
       <path id="Path_7" d="M294.7,470.57a9.115,9.115,0,0,0,12.927.029,10.152,10.152,0,0,0,2.643-7.462,9.911,9.911,0,0,0-2.643-7.344,9.222,9.222,0,0,0-12.927,0,9.912,9.912,0,0,0-2.643,7.344A10.173,10.173,0,0,0,294.7,470.57Zm6.463-24.266a16.329,16.329,0,1,1-12.074,4.759,16.329,16.329,0,0,1,12.074-4.759Z" transform="translate(-250.819 -431.675)" fill="#fff"/>
@@ -27,7 +27,7 @@ const Header: React.FC<DataPhotoProps> = ({photos}) => {
       <Hamburguer open={open} getState={setOpen} photos={photos}>
         
       </Hamburguer>   
-        <Menu photos={photos} name="desktop" isVertical={true} />
+      <Menu photos={photos} name="desktop" isVertical={true} />
     </div>
     );
 }

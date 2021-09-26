@@ -10,7 +10,11 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{photos ? photos[index].title : ""}</div>
+      <div className={styles.title}>
+          <h2>
+            {photos ? photos[index].title : ""}
+          </h2>
+      </div>
       <div className={styles.button}>
         <a
           href={photos ? photos[index].link : "#"}
@@ -19,7 +23,7 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
         >
           <p>veja mais</p>
           <div>
-            <FontAwesomeIcon icon={faChevronRight} size="sm" />
+            <FontAwesomeIcon icon={faChevronRight} size="2x" />
           </div>
         </a>
       </div>

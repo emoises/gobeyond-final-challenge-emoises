@@ -38,6 +38,7 @@
     transform: translateY(16px);
 }
 .menuBtn__burguerOpen{
+    position: fixed;
     width: 40px;
     height: 6px;
     /* background-color: #fff; */
@@ -63,36 +64,34 @@
     transform: rotate(-45deg)
 }
 .listContainer{
-    position: fixed;
-    right: -1px;
-    top: 0;
-    padding: 0;
-    margin: 0;
-    background-color: #000;
-    width: 200px;
-    height: 300px;
-    z-index: -1;
-}
-.listContainer{
     display: none;
-    position: absolute;
+    position: fixed;
+    background-color: #000;
     flex-direction: column;
+    width: 100vw;
+    height: 100vh;
     right: 0;
     top: 0;
     padding: 0;
-    width: auto;
+    padding-top: 15rem;
+    z-index: -1;
     transition: .15s ease-in-out;
 }
 .listContainer a {
     min-width: 120px;
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     border-bottom: 1px solid #fff;
     padding: 0;
     padding-bottom: 1px;
     display: flex;
     align-items: center ;
 }
-@media (max-width: 640px) {
+.listContainer a:first{
+    position: absolute;
+    top: 1rem;
+    margin-top: 2rem;
+}
+@media (max-width: 880px) {
     .menuBtn{
         display: flex;
     }
