@@ -20,19 +20,19 @@ a {
 @media (min-width: 760px) and (orientation: portrait) {
   html,
   body {
-    font-size: .8rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 1024px) and (orientation: portrait) {
   html,
   body {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 1920px) and (orientation: landscape) {
   html,
   body {
-    font-size: .8rem;
+    font-size: 1.6rem;
     background-color: cadetblue;
   }
 

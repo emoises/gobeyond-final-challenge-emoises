@@ -19,6 +19,6 @@
 }
 @media (min-width: 1024px) and (orientation: portrait) {
     .container{
-        font-size: .75rem;
+        font-size: 1.6rem;
     }
 }
