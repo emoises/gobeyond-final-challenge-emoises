@@ -22,7 +22,12 @@ const Hamburguer: React.FC<HamburguerProps> = ({open, getState,photos}) => {
               {
                 photos?.map( (photo, idx) => {
                   return (
-                    <a key={idx} href={photo.link} target="_blank" rel="noreferrer">
+                    <a 
+                    key={idx} 
+                    href={photo.link} 
+                    aria-label={photo.label}
+                    target="_blank" 
+                    rel="noreferrer">
                       {photo.label}
                       <p style={{color: "#fff"}}>{open}</p>
                     </a>

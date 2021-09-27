@@ -20,6 +20,7 @@ const Menu: React.FC<DataPhotoProps> = ({photos, isVertical,name}) => {
                   <a 
                     className={styles.link} 
                     href={items.link}
+                    aria-label={items.label}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -1,6 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 # Desafio final Go beyond. Particinado por [Corebiz](https://www.corebiz.ag/pt/)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/emoises/gobeyond-final-challenge-emoises/main/screens/desktop.gif">
+  <br/>
+  <h1 align="center">Desafio final <strong>Go Beyond</strong> </h1>
+</p>
+
 ## Introdução
 Neste desafio foi proposto a execução de um site responsivo com direcionamento para 4 links e exibição de quatro imagens ( cada imagem leva a um dos links fornecidos). 
 No footer há informações para contato e endereços da Corebiz pelo mundo. (Meu preferido é Buenos Aires! rs)

@@ -18,6 +18,7 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
         <a
           href={photos ? photos[index].link : "#"}
           target="_blank"
+          aria-label={photos[index].label}
           rel="noopener noreferrer"
         >
           <p>veja mais</p>

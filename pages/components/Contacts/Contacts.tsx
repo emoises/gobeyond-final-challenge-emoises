@@ -28,17 +28,27 @@ const Contacts: React.FC<DataPhotoProps> = ({photos}) => {
             <div className={styles.icons}>
               <ul>
                 <li>
-                  <a href="https://github.com/emoises" title="github" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/emoises" 
+                  title="github" 
+                  aria-label="github"
+                  target="_blank" 
+                  rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faGithub} color="#000" size='2x' /> 
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/automattizze/" title="instagram" target="_blank" rel="noopener noreferrer" >
+                  <a href="https://www.instagram.com/automattizze/" 
+                  title="instagram" target="_blank" 
+                  aria-label="instagram"
+                  rel="noopener noreferrer" >
                     <FontAwesomeIcon icon={faInstagram} size='2x' /> 
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/eduardomoises/" title="linkedin" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/eduardomoises/" 
+                  title="linkedin" target="_blank" 
+                  aria-label="linkedin"
+                  rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedinIn} size='2x' /> 
                     {}
                   </a>
@@ -54,7 +64,11 @@ const Contacts: React.FC<DataPhotoProps> = ({photos}) => {
                     photos.map( (photo, idx) => {
                       return (
                         <li key={idx}>
-                          <a href={photo.link} target="_blank" rel="noopener noreferrer">{photo.label}</a>
+                          <a href={photo.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label={photo.label}
+                                                  >{photo.label}</a>
                         </li>
                       )
                     })
