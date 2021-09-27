@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Head from 'next/head';
-import type { NextPage } from 'next';
-import { useCallback, useEffect, useState } from 'react';
+import type { GetStaticProps, NextPage } from 'next';
 
 import styles from '../styles/home.module.css';
 
@@ -21,10 +20,14 @@ const standardPhotos = [{
   link: '',
   label: ''
 }]
-const Home: NextPage = () => {
-  const [photos, setPhotos] = useState<PhotoProps[]>(standardPhotos);
-  const [teste, setTeste] = useState()
-  const getPhotos =  useCallback( async () => {
+
+interface HomeProps  {
+  photos : PhotoProps[]
+}
+const Home: NextPage<HomeProps>  = ({photos}) => {
+  // const [photos, setPhotos] = useState<PhotoProps[]>(standardPhotos);
+  // const [teste, setTeste] = useState()
+  // const getPhotos =  useCallback( async () => {
     // const response: ApiProps = await axios.get('https://jsonplaceholder.typicode.com/photos',{
     //     params:{
     //         _start: 350,
@@ -47,17 +50,17 @@ const Home: NextPage = () => {
     //           label: menu[idx].title
     //         }
     // })
-    const response: ApiProps = await axios.get('api/photos')
+  //   const response: ApiProps = await axios.get('api/photos')
 
-    const myPhotos = response.data
-    console.log(myPhotos)
-    setPhotos(myPhotos)
-  },[])
+  //   const myPhotos = response.data
+  //   console.log(myPhotos)
+  //   setPhotos(myPhotos)
+  // },[])
 
-  useEffect( () => {
-    getPhotos()
-    console.log(teste)
-  }, [getPhotos, teste])
+  // useEffect( () => {
+  //   getPhotos()
+  //   console.log(teste)
+  // }, [getPhotos, teste])
 
   return(
     <div className={styles.container}>
@@ -84,3 +87,15 @@ const Home: NextPage = () => {
 }
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+    const response = await fetch('https://gobeyond-desafio-final-emoises-emoises.vercel.app/api/photos')
+    const myPhotos: PhotoProps[] = await response.json()
+    console.log(myPhotos)
+    return {
+      props: {
+        photos: myPhotos
+      },
+      revalidate: 60 * 60 * 24 * 7
+    }
+}

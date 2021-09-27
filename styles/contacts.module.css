@@ -22,6 +22,9 @@
 .social ul li:not(:first-child){
     padding-left: 1rem;
 }
+.social ul li a{
+    width:30px;
+}
 .social .top .imageContainer p {
     max-width: 14rem;
     font-size: 1.6rem;
