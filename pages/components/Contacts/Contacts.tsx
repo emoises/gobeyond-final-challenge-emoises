@@ -50,7 +50,7 @@ const Contacts: React.FC<DataPhotoProps> = ({photos}) => {
                   aria-label="linkedin"
                   rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedinIn} size='2x' /> 
-                    {}
+                
                   </a>
                 </li>
               </ul>

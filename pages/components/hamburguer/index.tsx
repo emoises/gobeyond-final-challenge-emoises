@@ -25,7 +25,7 @@ const Hamburguer: React.FC<HamburguerProps> = ({open, getState,photos}) => {
                     <a 
                     key={idx} 
                     href={photo.link} 
-                    aria-label={photo.label}
+                    aria-label={photo ? photo.label : "blank"}
                     target="_blank" 
                     rel="noreferrer">
                       {photo.label}

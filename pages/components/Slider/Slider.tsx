@@ -11,14 +11,14 @@ const Slider: React.FC<SliderProps> = ({ photos }) => {
     <div className={styles.container}>
       <div className={styles.title}>
           <h2>
-            {photos ? photos[index].title : ""}
+            {photos ? photos[index].title : "blank"}
           </h2>
       </div>
       <div className={styles.button}>
         <a
           href={photos ? photos[index].link : "#"}
           target="_blank"
-          aria-label={photos[index].label}
+          aria-label={photos ? photos[index].label: "blank"}
           rel="noopener noreferrer"
         >
           <p>veja mais</p>
